@@ -1,0 +1,16 @@
+# the compiler: gcc for C program, define as g++ for C++
+CC = gcc
+
+# compiler flags:
+CFLAGS  = -lstdc++
+
+# the build target executable:
+TARGET = main
+
+all: $(TARGET)
+
+$(TARGET): $(TARGET).c
+    $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+
+clean:
+    $(RM) $(TARGET)
